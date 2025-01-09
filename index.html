@@ -22,13 +22,13 @@
     </script>
   </head>
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
           <img id="personal-logo" src="./Assets/logo.svg" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()>
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -37,19 +37,19 @@
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Contact</a
             >
           </li>
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -66,7 +66,7 @@
             I'm a <b class="blue">Frontend Software Engineer</b> with a passion
             for building web applications and delivering great user experiences.
             <br />
-            Here's a bit more <b class="about__me">about me.</b>
+            Here's a bit more <b class="about__me click" onclick="toggleModal()">about me.</b>
           </p>
           <div class="social__list">
             <a
@@ -93,9 +93,13 @@
           </div>
         </div>
       </header>
+      <a href="#">
+
+      
       <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-regular fa-envelope"></i>
       </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -153,6 +157,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
             <h3 class="modal__title modal__title--contact">
                 Let's have a chat
             </h3>
@@ -180,9 +185,17 @@
             <div class="modal__overlay modal__overlay--success">
                 Thanks for the message! Looking forward to speaking to you soon!
             </div>
-        </div>
-        <i class="fas fa-times modal__exit click"></i>
+        </div> 
       </div>
+      <img src="./Assets/semi circle.svg" class="shape shape--0">
+      <img src="./Assets/circle.svg" class="shape shape--1">
+      <img src="./Assets/squiggly.svg" class="shape shape--2">
+      <img src="./Assets/circle.svg" class="shape shape--3">
+      <img src="./Assets/triangle.svg" class="shape shape--4">
+      <img src="./Assets/circle.svg" class="shape shape--5">
+      <img src="./Assets/squiggly.svg" class="shape shape--6">
+      <img src="./Assets/circle.svg" class="shape shape--7">
+      <img src="./Assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="projects">
       <div class="container">
@@ -238,19 +251,19 @@
               GitHub
             </a>
             <a
-              href="#"
+              href="#" target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               LinkedIn
             </a>
             <a
-              href="#"
+              href="#" onclick="toggleModal()" class="" target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               Contact
             </a>
             <a
-              href="#"
+              href="insertResumeIntoAssets" target="blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               Resume
